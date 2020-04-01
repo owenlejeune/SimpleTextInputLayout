@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SimpleTextInputLayout">
+        <attr name="hint" format="string" />
+        <attr name="errorTextColor" format="color" />
+        <attr name="hintTextColor" format="color" />
+        <attr name="endIconTint" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="boxStrokeColor" format="color" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordToggleEditText">
+        <attr name="passwordConfirmation" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NameInputEditText">
+        <attr name="type" format="enum">
+            <enum name="first_name" value="0" />
+            <enum name="last_name" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>
