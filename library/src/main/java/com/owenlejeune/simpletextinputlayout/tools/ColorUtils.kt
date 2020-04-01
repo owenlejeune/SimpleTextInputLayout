@@ -6,7 +6,7 @@ import android.util.TypedValue
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 
-object ColorUtils {
+internal object ColorUtils {
 
     @Suppress("DEPRECATION")
     @ColorInt
