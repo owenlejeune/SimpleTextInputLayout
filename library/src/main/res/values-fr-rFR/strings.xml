@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_hint">Email</string>
+    <string name="first_name_hint">Prénom</string>
+    <string name="last_name_hint">Nom de Damille</string>
+    <string name="name_hint">Nom</string>
+    <string name="password_confirm_hint">Confirmez le mot de passe</string>
+    <string name="password_hint">Mot de passe</string>
+</resources>

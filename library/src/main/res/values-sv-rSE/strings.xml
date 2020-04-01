@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_hint">E-post</string>
+    <string name="first_name_hint">Förnamn</string>
+    <string name="last_name_hint">Efternamn</string>
+    <string name="name_hint">Namn</string>
+    <string name="password_confirm_hint">Bekräfta Lösenord</string>
+    <string name="password_hint">Lösenord</string>
+</resources>

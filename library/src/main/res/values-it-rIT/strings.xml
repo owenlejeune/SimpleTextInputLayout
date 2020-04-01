@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_hint">E-mail</string>
+    <string name="first_name_hint">Nome di Battesimo</string>
+    <string name="last_name_hint">Cognome</string>
+    <string name="name_hint">Nome</string>
+    <string name="password_confirm_hint">Conferma Parola D'Ordine</string>
+    <string name="password_hint">Parola D'Ordine</string>
+</resources>
