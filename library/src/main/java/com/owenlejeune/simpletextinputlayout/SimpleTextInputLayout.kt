@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.content.res.TypedArray
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.text.Editable
 import android.text.InputFilter
@@ -54,31 +55,27 @@ open class SimpleTextInputLayout @JvmOverloads constructor(context: Context,
         try {
             arr.getString(R.styleable.SimpleTextInputLayout_hint)?.let { setHint(it) }
 
-            val backgroundColor = arr.getColor(R.styleable.SimpleTextInputLayout_backgroundColor,
-                ColorUtils.getColorResForAttr(context, android.R.attr.background))
-            mTextInputEditText.setBackgroundColor(backgroundColor)
+            val backgroundColor = arr.getColor(R.styleable.SimpleTextInputLayout_backgroundColor, 0)
+            if (backgroundColor != 0) {
+                mTextInputEditText.setBackgroundColor(backgroundColor)
+                mTextInputLayout.setBackgroundColor(backgroundColor)
+            }
 
-            val errorColor = arr.getColor(R.styleable.SimpleTextInputLayout_errorTextColor,
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                    ColorUtils.getColorResForAttr(context, android.R.attr.colorError)
-                else Color.RED)
+            val errorColor = arr.getColor(R.styleable.SimpleTextInputLayout_errorTextColor, Color.RED)
             mTextInputLayout.setErrorTextColor(ColorStateList.valueOf(errorColor))
 
-            val hintColor = arr.getColor(R.styleable.SimpleTextInputLayout_hintTextColor,
-                ColorUtils.getColorResForAttr(context, android.R.attr.hint))
-            mTextInputLayout.defaultHintTextColor = ColorStateList.valueOf(hintColor)
+            val hintColor = arr.getColor(R.styleable.SimpleTextInputLayout_hintTextColor, 0)
+            if (hintColor != 0) mTextInputLayout.defaultHintTextColor = ColorStateList.valueOf(hintColor)
 
             val iconTint = arr.getColor(R.styleable.SimpleTextInputLayout_endIconTint,
                 ColorUtils.getColorResForAttr(context, android.R.attr.colorPrimary))
             mTextInputLayout.setEndIconTintList(ColorStateList.valueOf(iconTint))
 
-            val boxStrokeColor = arr.getColor(R.styleable.SimpleTextInputLayout_boxStrokeColor,
-                ColorUtils.getColorResForAttr(context, android.R.attr.strokeColor))
-            mTextInputLayout.boxStrokeColor = boxStrokeColor
+            val boxStrokeColor = arr.getColor(R.styleable.SimpleTextInputLayout_boxStrokeColor, 0)
+            if (boxStrokeColor != 0) mTextInputLayout.boxStrokeColor = boxStrokeColor
 
-            val textColor = arr.getColor(R.styleable.SimpleTextInputLayout_textColor,
-                ColorUtils.getColorResForAttr(context, android.R.attr.textColor))
-            mTextInputEditText.setTextColor(textColor)
+            val textColor = arr.getColor(R.styleable.SimpleTextInputLayout_textColor, 0)
+            if (textColor != 0) mTextInputEditText.setTextColor(textColor)
         } finally {
             arr.recycle()
         }
