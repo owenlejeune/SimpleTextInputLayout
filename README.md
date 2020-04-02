@@ -5,7 +5,7 @@ Simple TextInputLayout views
 ## Download
 ```groovy
 dependencies {
-  implementation 'com.github.owenlejeune:simpletextinputlayout:1.0.0'
+  implementation 'com.github.owenlejeune:simpletextinputlayout:1.0.1'
 }
 ```
 
@@ -42,6 +42,9 @@ dependencies {
 ```
 
 ## Releases
+
+### 1.0.1
+* fix styleable references
 
 #### 1.0
 * Initial release
