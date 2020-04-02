@@ -12,13 +12,13 @@ class NameSimpleTextInputLayout @JvmOverloads constructor(context: Context,
     : SimpleTextInputLayout(context, attrs, defStyleAttr) {
 
     init {
-        context.theme.obtainStyledAttributes(attrs, R.styleable.NameInputEditText, 0, 0)
+        context.theme.obtainStyledAttributes(attrs, R.styleable.NameSimpleTextInputLayout, 0, 0)
             .apply { setHint(this) }
     }
 
     private fun setHint(arr: TypedArray) {
         try {
-            val type = arr.getInt(R.styleable.NameInputEditText_type, -1)
+            val type = arr.getInt(R.styleable.NameSimpleTextInputLayout_type, -1)
             val hint = when (type) {
                 0 -> R.string.first_name_hint
                 1 -> R.string.last_name_hint
