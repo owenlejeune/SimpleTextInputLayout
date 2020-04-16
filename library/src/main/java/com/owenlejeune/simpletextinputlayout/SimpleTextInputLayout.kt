@@ -93,6 +93,10 @@ open class SimpleTextInputLayout @JvmOverloads constructor(context: Context,
         mTextInputLayout.hint = context.getString(hint)
     }
 
+    fun setText(text: CharSequence) {
+        mTextInputEditText.setText(text)
+    }
+
     fun overrideInputType(inputType: Int) {
         mTextInputEditText.inputType = inputType
     }
