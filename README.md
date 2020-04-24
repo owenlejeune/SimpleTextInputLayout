@@ -5,7 +5,7 @@ Simple TextInputLayout views
 ## Download
 ```groovy
 dependencies {
-  implementation 'com.github.owenlejeune:simpletextinputlayout:1.0.4'
+  implementation 'com.github.owenlejeune:simpletextinputlayout:1.1'
 }
 ```
 
@@ -42,6 +42,10 @@ dependencies {
 ```
 
 ## Releases
+
+### 1.1
+* fix incorrect input types on views extending SimpleTextInputLayout
+* add methods for setting various view colors
 
 ### 1.0.4
 * add support for setting text programmatically
