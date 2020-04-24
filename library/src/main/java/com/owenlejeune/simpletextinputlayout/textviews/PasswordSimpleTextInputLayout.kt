@@ -2,7 +2,6 @@ package com.owenlejeune.simpletextinputlayout.textviews
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.text.InputType
 import android.util.AttributeSet
 import com.google.android.material.textfield.TextInputLayout
 import com.owenlejeune.simpletextinputlayout.R
@@ -14,12 +13,14 @@ class PasswordSimpleTextInputLayout @JvmOverloads constructor(context: Context,
     : SimpleTextInputLayout(context, attrs, defStyleAttr) {
 
     init {
-        overrideInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
         setEndIconMode(TextInputLayout.END_ICON_PASSWORD_TOGGLE)
 
-        context.theme.obtainStyledAttributes(attrs, R.styleable.PasswordSimpleTextInputLayout, 0, 0)
+        context.theme
+            .obtainStyledAttributes(attrs, R.styleable.PasswordSimpleTextInputLayout, 0, 0)
             .apply { setHint(this) }
     }
+
+    override fun getLayout(): Int = R.layout.password_text_input_layout
 
     private fun setHint(arr: TypedArray) {
         try {
